@@ -16,4 +16,4 @@ jobs:
         shell: python
         run: print(40+2)
         env:
-          FLAG: ${{ secrets.flag }}
+          FLAG: ${{ secrets.FLAG }}
