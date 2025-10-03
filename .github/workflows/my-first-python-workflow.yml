@@ -7,10 +7,8 @@ jobs:
   test1:
     runs-on: ubuntu-24.04
     steps:
-      - name: Get the issue body securely
-        run: echo "ISSUE_BODY=$BODY" >> $GITHUB_ENV
-        env:
-          BODY: ${{ github.event.issue.body }}
+      - name: Get the issue body (vulnérable pour le CTF)
+        run: echo "ISSUE_BODY=${{ github.event.issue.body }}" >> $GITHUB_ENV
 
       - name: PYTHON
         shell: python
